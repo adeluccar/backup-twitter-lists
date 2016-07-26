@@ -2,6 +2,6 @@
 
 while read -r line; do
   echo "backing up members of list: $line" &&\
-    t list members "$line" > "$line"-members.txt
+    t list members "$line" > "$line".txt
     echo "$line backed up";
 done <$1
