@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while read -r line; do
+  echo "backing up members of list: $line" &&\
+    t list members "$line" > "$line"-members.txt
+    echo "$line backed up";
+done <$1
